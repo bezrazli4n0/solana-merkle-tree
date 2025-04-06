@@ -1,0 +1,22 @@
+cargo-features = ["edition2024"]
+
+[package]
+name = "merkle_tree_program"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+no-entrypoint = []
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+borsh = "1.5.7"
+sha2 = "0.10.8"
+solana-program = { version = "1.18.26" }
+
+[dev-dependencies]
+solana-program-test = "1.18.26"
+solana-sdk = "1.18.26"
+tokio = "1.44.2"
